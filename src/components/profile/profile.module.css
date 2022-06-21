@@ -1,0 +1,45 @@
+.profile__banner {
+    position: relative;
+    width: 100%;
+    height: 250px;
+
+}
+.profile__banner img {
+    width: 200px;
+    height: 200px;
+}
+.profile{
+    text-align: left;
+}
+.profile__post{
+
+}
+.infoWrapper{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+.infoText{
+    margin: 10px 0 ;
+    padding: 20px;
+    background-color: #a3ccfd;
+    text-align: left;
+}
+.addPost{
+    display: flex;
+    align-items: start;
+    flex: 1 1 auto;
+}
+.add{
+    margin: 0 10px;
+    display: inline-block;
+    padding: 10px;
+    letter-spacing: 3px;
+    background-color: lightslategray;
+}
+.texarea{
+    resize: none;
+    width: 300px;
+    height: 80px;
+    display: inline-block;
+}
