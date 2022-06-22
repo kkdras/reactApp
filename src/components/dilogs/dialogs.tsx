@@ -44,7 +44,6 @@ export let Dialogs: FC = () => {
          prevScroll.current = tmp.scrollTop
          tmp.scrollBy({
             top: tmp.scrollHeight - tmp.offsetHeight - tmp.scrollTop,
-            left: 100,
             behavior: 'smooth'
          });
       }

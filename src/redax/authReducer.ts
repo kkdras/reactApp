@@ -2,7 +2,8 @@ import {axiosRequest, IAuth, IRespType, ResultCode, ResultCodeLoginCreator} from
 import {createAsyncThunk, createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {IUserPhoto} from "../types/types";
 import {removeFormData} from "../dal/sessionStorageAPI";
-import {RootState} from "../app/redax-store";
+import {RootState} from "../app/hooks";
+
 
 interface IURLCaptcha {
    urlCaptcha: null | string
@@ -24,21 +25,24 @@ let getError = (): boolean => {
    return JSON.parse(tmp)
 }
 
-let initialState: IInitialState & IURLCaptcha = {
-   userId: null,
-   email: null,
-   login: null,
-   isLog: null,
-   urlCaptcha: sessionStorage.getItem("captcha"),
-   photos: null,
-   error: getError(),
-   pending: false
+
+let getInitialState = ():IInitialState & IURLCaptcha => {
+   return  {
+      userId: null,
+      email: null,
+      login: null,
+      isLog: null,
+      urlCaptcha: sessionStorage.getItem("captcha"),
+      photos: null,
+      error: getError(),
+      pending: false
+   }
 }
 
 
 let authSlice = createSlice({
       name: "auth",
-      initialState,
+      initialState: getInitialState,
       reducers: {
          setUserInfo(state, action:
             PayloadAction<Omit<IInitialState, "photos" | "error" | "pending">>) {

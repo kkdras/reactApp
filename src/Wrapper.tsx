@@ -3,9 +3,6 @@ import React from "react";
 import {Box} from "@mui/material";
 
 export let Wrapper = () => {
-   // let location = useLocation()
-   // let isAuth = useTypesSelector(state => state.auth.isLog)
-   // if (!isAuth && location.pathname !== "/login") return <Navigate to={"/login"} replace={true} />
 
    return <Box
       component={"main"}

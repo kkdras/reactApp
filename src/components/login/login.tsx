@@ -5,9 +5,9 @@ import {LoginStep} from "./steps/LoginStep";
 import {PasswordStep} from "./steps/PasswordStep";
 import {OptionsStep} from "./steps/OptionsStep";
 import {ILoginAction, logIn} from "../../redax/authReducer";
-import {useAppDispatch} from "../../app/redax-store";
+
 import {CaptchaPage} from "./steps/CaptchaPage";
-import {useTypesSelector} from "../../app/hooks";
+import {useAppDispatch, useTypesSelector} from "../../app/hooks";
 import Loading from "../users/loading";
 
 
